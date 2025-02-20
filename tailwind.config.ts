@@ -34,6 +34,11 @@ const config = {
           5: '#2E3036',
           6: '#24272C'
         },
+        primary: '#264653',
+        secondary: '#2a9d8f',
+        tertiary: '#e9c46a',
+        quaternary: '#f4a261',
+        quinary: '#e76f51',
         orange: {
           1: '#F97535'
         },

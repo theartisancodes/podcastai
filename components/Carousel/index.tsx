@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
-import { DotButton, useDotButton } from '@components/EmblaCarouselDotButton';
+import { DotButton } from '@components/EmblaCarouselDotButton';
 import LoaderSpinner from '@components/LoaderSpinner';
 import { EmblaCarouselType } from 'embla-carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useDotButton } from '@/hooks/useDotButton';
 import { CarouselProps } from '@/types';
 
 const EmblaCarousel = ({ fansLikeDetail }: CarouselProps) => {

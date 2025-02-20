@@ -1,14 +1,15 @@
-import LeftSidebar from "@/components/LeftSidebar";
-import MobileNav from "@/components/MobileNav";
-import RightSidebar from "@/components/RightSidebar";
-import Image from "next/image";
-import { Toaster } from "@/shared/toaster"
-import PodcastPlayer from "@/components/PodcastPlayer";
+import { ReactNode } from 'react';
+import Image from 'next/image';
+import LeftSidebar from '@/components/LeftSidebar';
+import MobileNav from '@/components/MobileNav';
+import PodcastPlayer from '@/components/PodcastPlayer';
+import RightSidebar from '@/components/RightSidebar';
+import { Toaster } from '@/shared/toaster';
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <div className="relative flex flex-col">

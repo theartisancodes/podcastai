@@ -1,14 +1,21 @@
-import Image from "next/image";
+import { ReactNode } from 'react';
+import Image from 'next/image';
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <main className="relative h-screen w-full">
       <div className="absolute size-full">
-        <Image src="/images/bg-img.png" alt="background" fill className="size-full" />
+        <Image
+          src="/images/bg-img.png"
+          alt="background"
+          fill
+          className="object-cover brightness-75 blur-md"
+          priority
+        />
       </div>
 
       {children}

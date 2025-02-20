@@ -161,6 +161,8 @@ export const getPodcastBySearch = query({
     return await ctx.db
       .query('podcasts')
       .withSearchIndex('search_body', (q) =>
+        // @ts-ignore
+        // eslint-disable-next-line no-constant-binary-expression
         q.search('podcastDescription' || 'podcastTitle', args.search)
       )
       .take(10);

@@ -1,25 +1,24 @@
-"use client";
+'use client';
 
-import { useQuery } from "convex/react";
-
-import EmptyState from "@/components/EmptyState";
-import LoaderSpinner from "@/components/LoaderSpinner";
-import PodcastCard from "@/components/PodcastCard";
-import ProfileCard from "@/components/ProfileCard";
-import { api } from "@/convex/_generated/api";
+import { useQuery } from 'convex/react';
+import EmptyState from '@/components/EmptyState';
+import LoaderSpinner from '@/components/LoaderSpinner';
+import PodcastCard from '@/components/PodcastCard';
+import ProfileCard from '@/components/ProfileCard';
+import { api } from '@/convex/_generated/api';
 
 const ProfilePage = ({
-  params,
+  params
 }: {
   params: {
     profileId: string;
   };
 }) => {
   const user = useQuery(api.users.getUserById, {
-    clerkId: params.profileId,
+    clerkId: params.profileId
   });
   const podcastsData = useQuery(api.podcasts.getPodcastByAuthorId, {
-    authorId: params.profileId,
+    authorId: params.profileId
   });
 
   if (!user || !podcastsData) return <LoaderSpinner />;
