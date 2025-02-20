@@ -39,7 +39,7 @@ export interface PodcastProps {
   authorImageUrl: string;
   voicePrompt: string;
   imagePrompt: string | null;
-  voiceType: string;
+  voiceType: string | null;
   audioDuration: number;
   views: number;
 }

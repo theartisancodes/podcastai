@@ -4,7 +4,7 @@ PodcastAi is an AI-powered podcast generation app that converts text into natura
 
 ## 🚀 Features
 
-- 🔊 **AI Text-to-Speech** – Generate high-quality voiceovers using OpenAI's API.
+- 🔊 **AI Text-to-Speech** – Generate high-quality voiceovers using OpenAI's `TTS` LLM.
 - 🎙 **Podcast Management** – Organize, edit, and publish episodes easily.
 - 🏗 **Modern Tech Stack** – Built with Next.js 15, Tailwind CSS, and React 19.
 - 🔐 **User Authentication** – Powered by Clerk authentication.

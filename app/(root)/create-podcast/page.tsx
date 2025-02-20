@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { notifyError } from '@lib/useToastify';
+import Form from '@shared/form/Form';
 import { useMutation } from 'convex/react';
 import { Loader } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -31,7 +33,6 @@ import {
 } from '@/shared/select';
 import { Textarea } from '@/shared/textarea';
 import { useToast } from '@/shared/use-toast';
-import Form from '@shared/form/Form';
 
 const voiceCategories = ['alloy', 'shimmer', 'nova', 'echo', 'fable', 'onyx'];
 
@@ -79,10 +80,10 @@ const CreatePodcast = () => {
           title: 'Please generate audio and image'
         });
         setIsSubmitting(false);
-        throw new Error('Please generate audio and image');
+        notifyError('Please generate audio and image');
       }
 
-      const podcast = await createPodcast({
+      await createPodcast({
         podcastTitle: data.podcastTitle,
         podcastDescription: data.podcastDescription,
         audioUrl,
